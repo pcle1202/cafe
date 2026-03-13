@@ -17,13 +17,13 @@ export default function About() {
 
           {/* Text */}
           <div className="md:w-2/5 space-y-6 text-center md:text-left">
-            <h2 className="text-4xl font-semibold">About</h2>
+            <h2 className="text-4xl font-semibold">About Us</h2>
 
             <p className="text-lg text-gray-600">
-              Cafe 104 is a neighborhood café serving specialty coffee,
-              fresh pastries, and simple food made with care.
-              We focus on seasonal ingredients and creating
-              a welcoming space for the community.
+            Cafe 104 is a neighborhood café dedicated to bringing people 
+            together over great coffee,  fresh brunch, and homemade desserts. 
+            We strive to create a welcoming space where friends, family, 
+            and community can gather and enjoy simple, delicious food.
             </p>
           </div>
 

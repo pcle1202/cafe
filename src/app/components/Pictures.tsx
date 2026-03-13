@@ -60,13 +60,13 @@ export default function Gallery() {
           
         >
 
-      <img src="/images/matcha.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/black_sesame.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/protein.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/vinchaud.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/burger.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/dubaisouffle.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/signaturecoffee.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/matcha.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/black_sesame.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/protein.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/vinchaud.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/burger.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/dubaisouffle.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/signaturecoffee.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
         </div>
       </Reveal>
     </section>

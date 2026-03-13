@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Background image */}
       <img
         src="/images/souffle.jpg"
-        alt="Cafe 104"
+        alt="Cafe104"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
@@ -27,7 +27,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg">
-          Specialty Coffee & Brunch
+          Brunch • Dessert • K-style Drinks
         </p>
 
         <div className="flex justify-center gap-4">
