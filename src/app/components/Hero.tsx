@@ -22,11 +22,11 @@ export default function Hero() {
       {/* Hero content */}
       <div className="relative text-center text-white space-y-6">
 
-        <h1 className="text-5xl font-semibold">
+        <h1 className="text-6xl font-semibold">
           Cafe 104
         </h1>
 
-        <p className="text-lg">
+        <p className="text-lg font-medium">
           Brunch • Dessert • K-style Drinks
         </p>
 
@@ -45,7 +45,7 @@ export default function Hero() {
 
             <button
               onClick={() => setOpen(!open)}
-              className="bg-black text-white px-6 py-2 rounded"
+              className="bg-[#6E8F81] text-white px-6 py-2 rounded hover:opacity-90"
             >
               Order Online ▼
             </button>
