@@ -32,7 +32,7 @@ export default function GalleryPage() {
         </Reveal>
 
         <Reveal>
-          <img src="/images/gallery/black_sesame.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
+          <img src="/images/gallery/blacksesame.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
         </Reveal>
 
         <Reveal>
@@ -48,13 +48,34 @@ export default function GalleryPage() {
         </Reveal>
 
         <Reveal>
-          <img src="/images/dubaisouffle.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
+          <img src="/images/gallery/dubaisouffle.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
         </Reveal>
 
         <Reveal>
           <img src="/images/gallery/signaturecoffee.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
         </Reveal>
+        
+        <Reveal>
+          <img src="/images/gallery/seasonal0.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
+        </Reveal>
 
+        <Reveal>
+          <img src="/images/gallery/seasonal1.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
+        </Reveal>
+        <Reveal>
+          <img src="/images/gallery/seasonal2.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
+        </Reveal>
+        <Reveal>
+          <img src="/images/gallery/seasonal3.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
+        </Reveal>
+
+
+        <Reveal>
+          <img src="/images/gallery/seasonal4.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
+        </Reveal>
+        <Reveal>
+          <img src="/images/gallery/seasonal5.png" className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105"/>
+        </Reveal>                
       </div>
 
     </section>

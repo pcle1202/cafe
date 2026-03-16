@@ -8,12 +8,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="relative flex justify-center gap-12 text-xl font-medium py-6 bg-white">
+      <nav className="relative flex justify-center gap-12 text-xl font-medium py-6 bg-[#f9f8f3]">
 
         {/* Logo */}
         <Link href="/" className="absolute left-6 top-1/2 -translate-y-1/2">
           <img
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt="Cafe 104"
             className="h-23 w-auto"
           />

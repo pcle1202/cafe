@@ -9,9 +9,9 @@ export default function Footer() {
         {/* Logo + Instagram */}
         <div>
           <img
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt="Cafe 104"
-            className="w-52 opacity-90 mb-6"
+            className="w-64 opacity-90 mb-6"
           />
 
           <p className="text-xl font-semibold mb-2">
