@@ -24,6 +24,7 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
 };
+
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400","500","600","700"],
@@ -32,12 +33,18 @@ const outfit = Outfit({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <Navbar />
+      <body className={`${poppins.className} flex justify-center`}>
 
-        {children}
+        <div className="scale-[0.8] origin-top w-[125%]">
 
-        <Footer />
+          <Navbar />
+
+          {children}
+
+          <Footer />
+
+        </div>
+
       </body>
     </html>
   )
