@@ -1,0 +1,48 @@
+[33mcommit 5c8f2d48134952c62db0a41d85230934112c2eab[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: pcle1202 <p.c.le1202@gmail.com>
+Date:   Mon Mar 16 02:51:12 2026 -0400
+
+    zoom
+
+[33mcommit 6531af81f55b260c47070efadd7ee0adf6eaaf16[m
+Author: pcle1202 <p.c.le1202@gmail.com>
+Date:   Mon Mar 16 02:38:26 2026 -0400
+
+    mobile viewport
+
+[33mcommit 3f4cb78c441b4c597d6f27e7e50466a78deec48e[m
+Author: pcle1202 <p.c.le1202@gmail.com>
+Date:   Mon Mar 16 02:19:39 2026 -0400
+
+    added menus, improved interface, changed fonts
+
+[33mcommit 862510260f7bec5064f69c45a4c84c9975fd5b96[m
+Author: pcle1202 <p.c.le1202@gmail.com>
+Date:   Fri Mar 13 15:28:25 2026 -0400
+
+    added more pictures and reworded some stuff
+
+[33mcommit bdf0a520a784efd4f47901f0fb6cef69f43d6e0d[m
+Merge: 6b8669e 24a9f50
+Author: pcle1202 <122938147+ctlh1202@users.noreply.github.com>
+Date:   Fri Mar 13 03:30:04 2026 -0400
+
+    Resolve merge conflict
+
+[33mcommit 6b8669e29827b8a89ad28e8097df6a136ba18b52[m
+Author: pcle1202 <122938147+ctlh1202@users.noreply.github.com>
+Date:   Fri Mar 13 03:19:34 2026 -0400
+
+    initial setup
+
+[33mcommit 24a9f5039f04167aa6d7cf613fab25a7ffd3f409[m
+Author: pcle1202 <p.c.le1202@gmail.com>
+Date:   Fri Mar 13 03:18:45 2026 -0400
+
+    Initial commit
+
+[33mcommit 4d57b61214f616e899b328162efbad9c8f7eefea[m
+Author: pcle1202 <122938147+ctlh1202@users.noreply.github.com>
+Date:   Thu Mar 12 14:08:25 2026 -0400
+
+    Initial commit from Create Next App
