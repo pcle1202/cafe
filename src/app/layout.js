@@ -16,10 +16,14 @@ export const quicksand = Quicksand({
 });
 
 export const metadata = {
-  title: 'Cafe104',
-  description: 'Cafe104 website',
+  title: 'Cafe 104',
+  description: 'Cafe 104 website',
 }
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400","500","600","700"],
