@@ -154,30 +154,29 @@ export default function MenuPage() {
             key={img}
             src={img}
             alt="Cafe 104 menu"
-            onClick={() => setActiveIndex(allImages.indexOf(img))}
-            className="w-full cursor-zoom-in rounded-2xl shadow-md"
+            className="w-full rounded-2xl shadow-md"
           />
         ))}
       </div>
 
       {activeIndex !== null && (
         <div
-          className="fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center overflow-auto bg-black/90 p-4 sm:p-6"
+          className="fixed inset-0 z-[70] flex items-start justify-center overflow-auto bg-black/90"
           onClick={() => setActiveIndex(null)}
         >
           <div
-            className="relative flex w-full items-center justify-center"
+            className="relative flex w-full items-start justify-center"
             onClick={(event) => event.stopPropagation()}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
             <button
               type="button"
-              className="fixed right-5 top-4 z-10 text-4xl font-light text-white transition hover:opacity-80 sm:right-8 sm:top-6"
+              className="fixed right-8 top-6 z-10 text-4xl font-light text-white transition hover:opacity-80"
               onClick={() => setActiveIndex(null)}
               aria-label="Close menu viewer"
             >
-              X
+              ×
             </button>
 
             <button
@@ -191,7 +190,7 @@ export default function MenuPage() {
 
             <img
               src={allImages[activeIndex]}
-              className="h-auto max-h-[88vh] w-full max-w-4xl rounded-xl object-contain"
+              className="h-auto w-auto max-w-none"
               alt="Menu"
             />
 
