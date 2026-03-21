@@ -20,17 +20,13 @@ export default function Navbar() {
     <>
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#7FA695] md:border-black/5 md:bg-[#f9f8f3]">
         <div className="relative mx-auto flex h-18 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20 md:justify-center">
-          {/* Logo */}
+          {/* Wordmark */}
           <Link
             href="/"
-            className="z-50 md:absolute md:left-6 md:top-1/2 md:-translate-y-1/2"
+            className="z-50 text-[1.7rem] font-black tracking-[0.02em] text-white [font-family:'Arial_Rounded_MT_Bold','Nunito','Trebuchet_MS','Verdana',sans-serif] md:absolute md:left-6 md:top-1/2 md:-translate-y-1/2 md:text-[2rem] md:text-[#7FA695]"
             onClick={() => setMenuOpen(false)}
           >
-            <img
-              src="/images/logo.PNG"
-              alt="Cafe 104"
-              className="h-11 w-auto md:h-14"
-            />
+            Cafe104
           </Link>
 
           {/* Desktop Nav */}

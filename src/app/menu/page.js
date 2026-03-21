@@ -162,18 +162,18 @@ export default function MenuPage() {
 
       {activeIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/90"
+          className="fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center overflow-auto bg-black/90 p-4 sm:p-6"
           onClick={() => setActiveIndex(null)}
         >
           <div
-            className="relative flex h-full w-full items-center justify-center p-4 sm:p-6"
+            className="relative flex w-full items-center justify-center"
             onClick={(event) => event.stopPropagation()}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
             <button
               type="button"
-              className="absolute right-4 top-4 z-10 text-4xl font-light text-white transition hover:opacity-80 sm:right-6 sm:top-6"
+              className="fixed right-5 top-4 z-10 text-4xl font-light text-white transition hover:opacity-80 sm:right-8 sm:top-6"
               onClick={() => setActiveIndex(null)}
               aria-label="Close menu viewer"
             >
@@ -182,7 +182,7 @@ export default function MenuPage() {
 
             <button
               type="button"
-              className="absolute left-3 top-1/2 z-10 -translate-y-1/2 text-6xl font-light leading-none text-white transition hover:scale-110 hover:text-[#d8e7df] sm:left-6 sm:text-7xl"
+              className="fixed left-3 top-1/2 z-10 -translate-y-1/2 text-6xl font-light leading-none text-white transition hover:scale-110 hover:text-[#d8e7df] sm:left-6 sm:text-7xl"
               onClick={showPrevious}
               aria-label="Previous menu"
             >
@@ -197,7 +197,7 @@ export default function MenuPage() {
 
             <button
               type="button"
-              className="absolute right-3 top-1/2 z-10 -translate-y-1/2 text-6xl font-light leading-none text-white transition hover:scale-110 hover:text-[#d8e7df] sm:right-6 sm:text-7xl"
+              className="fixed right-3 top-1/2 z-10 -translate-y-1/2 text-6xl font-light leading-none text-white transition hover:scale-110 hover:text-[#d8e7df] sm:right-6 sm:text-7xl"
               onClick={showNext}
               aria-label="Next menu"
             >
