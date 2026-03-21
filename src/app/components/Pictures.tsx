@@ -3,6 +3,37 @@
 import Reveal from "./animations/Reveal";
 import { useEffect, useRef } from "react";
 
+const pictureImages = [
+  "/images/gallery/mojitos.PNG",
+  "/images/gallery/blacksesame.PNG",
+  "/images/gallery/cilantroade.jpg",
+  "/images/gallery/creampasta.jpg",
+  "/images/gallery/dirtycoffee.jpg",
+  "/images/gallery/drinks.png",
+  "/images/gallery/drinks2.png",
+  "/images/gallery/dubai.png",
+  "/images/gallery/dubaisouffle.png",
+  "/images/gallery/dutchbaby.png",
+  "/images/gallery/food.jpg",
+  "/images/gallery/kimchipasta.jpg",
+  "/images/gallery/mangosouffle.jpg",
+  "/images/gallery/matcha.png",
+  "/images/gallery/pastas.jpg",
+  "/images/gallery/protein.png",
+  "/images/gallery/seasonal0.PNG",
+  "/images/gallery/seasonal1.PNG",
+  "/images/gallery/seasonal2.PNG",
+  "/images/gallery/seasonal3.PNG",
+  "/images/gallery/seasonal4.PNG",
+  "/images/gallery/seasonal5.PNG",
+  "/images/gallery/signaturecoffee.png",
+  "/images/gallery/ssam.jpg",
+  "/images/gallery/strawberry matcha.png",
+  "/images/gallery/vinchaud.jpg",
+  "/images/gallery/vinchaud2.jpg",
+  "/images/gallery/burger.png",
+];
+
 export default function Gallery() {
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -62,46 +93,15 @@ export default function Gallery() {
           onPointerUp={handlePointerUp}
           onPointerLeave={handlePointerUp}
         >
-          <img
-            src="/images/gallery/mojitos.PNG"
-            draggable="false"
-            className={imageClassName}
-          />
-          <img
-            src="/images/gallery/blacksesame.PNG"
-            draggable="false"
-            className={imageClassName}
-          />
-          <img
-            src="/images/gallery/seasonal0.PNG"
-            draggable="false"
-            className={imageClassName}
-          />
-          <img
-            src="/images/gallery/seasonal1.PNG"
-            draggable="false"
-            className={imageClassName}
-          />
-          <img
-            src="/images/gallery/seasonal2.PNG"
-            draggable="false"
-            className={imageClassName}
-          />
-          <img
-            src="/images/gallery/seasonal3.PNG"
-            draggable="false"
-            className={imageClassName}
-          />
-          <img
-            src="/images/gallery/seasonal4.PNG"
-            draggable="false"
-            className={imageClassName}
-          />
-          <img
-            src="/images/gallery/seasonal5.PNG"
-            draggable="false"
-            className={imageClassName}
-          />
+          {pictureImages.map((src) => (
+            <img
+              key={src}
+              src={src}
+              draggable="false"
+              className={imageClassName}
+              alt="Cafe 104 food and drinks"
+            />
+          ))}
         </div>
       </Reveal>
     </section>

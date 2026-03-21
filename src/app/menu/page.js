@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function MenuPage() {
   const [tab, setTab] = useState("seasonal");
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
   const [visible, setVisible] = useState(false);
+  const touchStartX = useRef(null);
 
   useEffect(() => {
     setVisible(true);
@@ -18,7 +19,82 @@ export default function MenuPage() {
     dessert: ["/images/menu/menu3.png"],
   };
 
+  const allImages = [
+    ...menus.seasonal,
+    ...menus.drinks,
+    ...menus.brunch,
+    ...menus.dessert,
+  ];
+
   const images = menus[tab];
+
+  useEffect(() => {
+    if (activeIndex === null) return;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setActiveIndex(null);
+      }
+
+      if (event.key === "ArrowRight") {
+        setActiveIndex((current) =>
+          current === null ? 0 : (current + 1) % allImages.length
+        );
+      }
+
+      if (event.key === "ArrowLeft") {
+        setActiveIndex((current) =>
+          current === null
+            ? allImages.length - 1
+            : (current - 1 + allImages.length) % allImages.length
+        );
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeIndex, allImages.length]);
+
+  const showPrevious = () => {
+    setActiveIndex((current) =>
+      current === null
+        ? allImages.length - 1
+        : (current - 1 + allImages.length) % allImages.length
+    );
+  };
+
+  const showNext = () => {
+    setActiveIndex((current) =>
+      current === null ? 0 : (current + 1) % allImages.length
+    );
+  };
+
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.changedTouches[0]?.clientX ?? null;
+  };
+
+  const handleTouchEnd = (event) => {
+    const startX = touchStartX.current;
+    const endX = event.changedTouches[0]?.clientX ?? null;
+    touchStartX.current = null;
+
+    if (startX === null || endX === null) return;
+
+    const deltaX = endX - startX;
+
+    if (Math.abs(deltaX) < 40) return;
+
+    if (deltaX < 0) {
+      showNext();
+    } else {
+      showPrevious();
+    }
+  };
 
   return (
     <section
@@ -73,31 +149,61 @@ export default function MenuPage() {
       </div>
 
       <div className="space-y-6 sm:space-y-10">
-        {images.map((img, index) => (
+        {images.map((img) => (
           <img
-            key={index}
+            key={img}
             src={img}
             alt="Cafe 104 menu"
-            onClick={() => setSelectedImage(img)}
+            onClick={() => setActiveIndex(allImages.indexOf(img))}
             className="w-full cursor-zoom-in rounded-2xl shadow-md"
           />
         ))}
       </div>
 
-      {selectedImage && (
+      {activeIndex !== null && (
         <div
-          className="fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center overflow-auto bg-black/90 p-4 sm:p-6"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-50 bg-black/90"
+          onClick={() => setActiveIndex(null)}
         >
-          <div className="pointer-events-none fixed right-5 top-4 text-4xl font-light text-white sm:right-8 sm:top-6">
-            X
-          </div>
+          <div
+            className="relative flex h-full w-full items-center justify-center p-4 sm:p-6"
+            onClick={(event) => event.stopPropagation()}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            <button
+              type="button"
+              className="absolute right-4 top-4 z-10 text-4xl font-light text-white transition hover:opacity-80 sm:right-6 sm:top-6"
+              onClick={() => setActiveIndex(null)}
+              aria-label="Close menu viewer"
+            >
+              X
+            </button>
 
-          <img
-            src={selectedImage}
-            className="h-auto max-h-[88vh] w-full max-w-4xl rounded-xl object-contain"
-            alt="Menu"
-          />
+            <button
+              type="button"
+              className="absolute left-3 top-1/2 z-10 -translate-y-1/2 text-6xl font-light leading-none text-white transition hover:scale-110 hover:text-[#d8e7df] sm:left-6 sm:text-7xl"
+              onClick={showPrevious}
+              aria-label="Previous menu"
+            >
+              {"<"}
+            </button>
+
+            <img
+              src={allImages[activeIndex]}
+              className="h-auto max-h-[88vh] w-full max-w-4xl rounded-xl object-contain"
+              alt="Menu"
+            />
+
+            <button
+              type="button"
+              className="absolute right-3 top-1/2 z-10 -translate-y-1/2 text-6xl font-light leading-none text-white transition hover:scale-110 hover:text-[#d8e7df] sm:right-6 sm:text-7xl"
+              onClick={showNext}
+              aria-label="Next menu"
+            >
+              {">"}
+            </button>
+          </div>
         </div>
       )}
     </section>
