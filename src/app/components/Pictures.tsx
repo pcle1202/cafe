@@ -9,6 +9,7 @@ export default function Gallery() {
   const isDown = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
+
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
@@ -16,7 +17,7 @@ export default function Gallery() {
     let animationFrame: number;
 
     const autoScroll = () => {
-      slider.scrollLeft += .50;
+      slider.scrollLeft += 0.5;
 
       if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
         slider.scrollLeft = 0;
@@ -29,6 +30,7 @@ export default function Gallery() {
 
     return () => cancelAnimationFrame(animationFrame);
   }, []);
+
   const handlePointerDown = (e: React.PointerEvent) => {
     isDown.current = true;
     startX.current = e.clientX;
@@ -46,29 +48,60 @@ export default function Gallery() {
     isDown.current = false;
   };
 
-  return (
-    <section className="pt-10 pb-20">
-      <Reveal>
+  const imageClassName =
+    "h-[360px] w-auto flex-shrink-0 object-cover pointer-events-none sm:h-[480px] md:h-[650px]";
 
+  return (
+    <section className="pb-16 pt-8 sm:pb-20 sm:pt-10">
+      <Reveal>
         <div
           ref={sliderRef}
-          className="flex overflow-x-scroll cursor-grab active:cursor-grabbing select-none"
+          className="flex cursor-grab overflow-x-scroll select-none active:cursor-grabbing"
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
           onPointerLeave={handlePointerUp}
-          
         >
-
-      <img src="/images/gallery/mojitos.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/blacksesame.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal0.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal1.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal2.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal3.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal4.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal5.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      
+          <img
+            src="/images/gallery/mojitos.PNG"
+            draggable="false"
+            className={imageClassName}
+          />
+          <img
+            src="/images/gallery/blacksesame.PNG"
+            draggable="false"
+            className={imageClassName}
+          />
+          <img
+            src="/images/gallery/seasonal0.PNG"
+            draggable="false"
+            className={imageClassName}
+          />
+          <img
+            src="/images/gallery/seasonal1.PNG"
+            draggable="false"
+            className={imageClassName}
+          />
+          <img
+            src="/images/gallery/seasonal2.PNG"
+            draggable="false"
+            className={imageClassName}
+          />
+          <img
+            src="/images/gallery/seasonal3.PNG"
+            draggable="false"
+            className={imageClassName}
+          />
+          <img
+            src="/images/gallery/seasonal4.PNG"
+            draggable="false"
+            className={imageClassName}
+          />
+          <img
+            src="/images/gallery/seasonal5.PNG"
+            draggable="false"
+            className={imageClassName}
+          />
         </div>
       </Reveal>
     </section>

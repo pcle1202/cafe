@@ -8,8 +8,6 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/menu", label: "Menu" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -20,18 +18,18 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 bg-[#f9f8f3] border-b border-black/5">
-        <div className="relative flex items-center justify-center px-6 h-20">
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#7FA695] md:border-black/5 md:bg-[#f9f8f3]">
+        <div className="relative mx-auto flex h-18 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20 md:justify-center">
           {/* Logo */}
           <Link
             href="/"
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-50"
+            className="z-50 md:absolute md:left-6 md:top-1/2 md:-translate-y-1/2"
             onClick={() => setMenuOpen(false)}
           >
             <img
               src="/images/logo.PNG"
               alt="Cafe 104"
-              className="h-12 w-auto md:h-14"
+              className="h-11 w-auto md:h-14"
             />
           </Link>
 
@@ -54,22 +52,23 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-50 flex md:hidden flex-col justify-center items-center w-10 h-10"
+            className="z-50 flex h-10 w-10 flex-col items-center justify-center md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             <span
-              className={`block h-0.5 w-6 bg-black transition duration-300 ${
+              className={`block h-0.5 w-6 bg-white transition duration-300 md:bg-black ${
                 menuOpen ? "rotate-45 translate-y-1.5" : ""
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-black my-1 transition duration-300 ${
+              className={`block h-0.5 w-6 bg-white my-1 transition duration-300 md:bg-black ${
                 menuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-black transition duration-300 ${
+              className={`block h-0.5 w-6 bg-white transition duration-300 md:bg-black ${
                 menuOpen ? "-rotate-45 -translate-y-1.5" : ""
               }`}
             />
@@ -78,10 +77,9 @@ export default function Navbar() {
 
         {/* Mobile Full-Screen Menu */}
         <div
-          className={`md:hidden fixed inset-0 bg-[#7FA695] flex flex-col items-center justify-center gap-8 text-white text-3xl font-semibold transition-all duration-300 ${
-            menuOpen
+  className={`fixed inset-x-0 top-[72px] z-40 flex flex-col gap-4 rounded-b-3xl border-t border-white/10 bg-[#7FA695] px-6 py-8 text-center text-lg font-semibold text-white shadow-lg transition-all duration-300 md:hidden ${            menuOpen
               ? "opacity-100 visible"
-              : "opacity-0 invisible pointer-events-none"
+              : "pointer-events-none invisible opacity-0"
           }`}
         >
           {links.map((link) => (
