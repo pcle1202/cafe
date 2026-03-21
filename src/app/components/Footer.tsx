@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Logo + Instagram */}
         <div>
           <img
-            src="/images/logo.png"
+            src="/images/logo.PNG"
             alt="Cafe 104"
             className="w-64 opacity-90 mb-6"
           />

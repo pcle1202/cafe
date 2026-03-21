@@ -60,14 +60,14 @@ export default function Gallery() {
           
         >
 
-      <img src="/images/gallery/mojitos.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/blacksesame.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal0.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal1.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal2.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal3.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal4.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
-      <img src="/images/gallery/seasonal5.png" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/mojitos.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/blacksesame.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/seasonal0.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/seasonal1.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/seasonal2.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/seasonal3.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/seasonal4.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
+      <img src="/images/gallery/seasonal5.PNG" draggable="false" className="h-[650px] w-auto flex-shrink-0 object-cover pointer-events-none"/>
       
         </div>
       </Reveal>

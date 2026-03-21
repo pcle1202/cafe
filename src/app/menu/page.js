@@ -11,7 +11,7 @@ export default function MenuPage() {
 }, []);  
   const menus = {
     seasonal: [
-      "/images/menu/seasonal.png",
+      "/images/menu/seasonal.PNG",
     ],
     drinks: [
       "/images/menu/menu1.png",

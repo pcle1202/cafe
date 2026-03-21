@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="absolute left-6 top-1/2 -translate-y-1/2">
           <img
-            src="/images/logo.png"
+            src="/images/logo.PNG"
             alt="Cafe 104"
             className="h-23 w-auto"
           />
