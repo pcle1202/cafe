@@ -13,10 +13,10 @@ export default function MenuPage() {
   }, []);
 
   const menus = {
-    seasonal: ["/images/menu/seasonal.PNG"],
+    seasonal: ["/images/menu/seasonal.jpg"],
     drinks: [
-      "/images/menu/menu1.png",
-      "/images/menu/menu2.png",
+      "/images/menu/menu1.jpg",
+      "/images/menu/menu2.jpg",
       "/images/menu/book14.jpg", //highball
       "/images/menu/book15.jpg" //mojito      
       ],
@@ -24,9 +24,10 @@ export default function MenuPage() {
       "/images/menu/book11.jpg", //souffles
       "/images/menu/book12.jpg", //food1
       "/images/menu/book13.jpg", //food2
-      "/images/pastas.jpg", //pastas
+      "/images/gallery/pastas.jpg", //pastas
+      "/images/gallery/dutchbaby.jpg", //dutch baby
     ],
-    dessert: ["/images/menu/menu3.png"],
+    dessert: ["/images/menu/menu3.jpg"],
   };
 
   const allImages = [
