@@ -19,26 +19,26 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#7FA695] md:border-black/5 md:bg-[#f9f8f3]">
-        <div className="relative mx-auto flex h-18 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20 md:justify-center">
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#7FA695]">
+        <div className="relative mx-auto flex h-18 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-16 md:justify-center">
           {/* Wordmark */}
           <Link
             href="/"
-            className={`${deliusSwashCaps.className} z-50 text-[1.7rem] font-black tracking-[0.02em] text-white [text-shadow:0_0_1px_currentColor,0_0_2px_currentColor] [-webkit-text-stroke:0.6px_currentColor] md:absolute md:left-6 md:top-1/2 md:-translate-y-1/2 md:text-[2rem] md:text-[#7FA695]`}
+            className={`${deliusSwashCaps.className} z-50 text-[1.7rem] font-black tracking-[0.02em] text-white [text-shadow:0_0_1px_currentColor,0_0_2px_currentColor] [-webkit-text-stroke:0.6px_currentColor] md:absolute md:left-6 md:top-1/2 md:-translate-y-1/2 md:text-[2rem]`}
             onClick={() => setMenuOpen(false)}
           >
             Cafe104
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-12 text-xl font-medium">
+          <div className="hidden md:flex items-center gap-12 text-xl font-medium text-white">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={
                   isActive(link.href)
-                    ? "border-b-4 border-[#7FA695] pb-1"
+                    ? "border-b-4 border-white pb-1"
                     : "opacity-70 hover:opacity-100 transition"
                 }
               >

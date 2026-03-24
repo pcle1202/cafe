@@ -16,7 +16,7 @@ export default function About() {
 
           <div className="space-y-5 text-center md:w-2/5 md:text-left">
             <h2
-              className={`${playfairDisplay.className} whitespace-nowrap text-2xl font-semibold leading-tight text-gray-800 sm:text-3xl`}
+              className={`${playfairDisplay.className} whitespace-nowrap text-2xl font-semibold italic leading-tight text-gray-800 sm:text-3xl`}
             >
               "Awaken Your Senses with Every Bite"
             </h2>

@@ -13,6 +13,7 @@ export const quicksand = Quicksand({
 export const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const deliusSwashCaps = Delius_Swash_Caps({
