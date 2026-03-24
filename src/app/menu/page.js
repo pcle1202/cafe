@@ -14,8 +14,18 @@ export default function MenuPage() {
 
   const menus = {
     seasonal: ["/images/menu/seasonal.PNG"],
-    drinks: ["/images/menu/menu1.png", "/images/menu/menu2.png"],
-    brunch: [],
+    drinks: [
+      "/images/menu/menu1.png",
+      "/images/menu/menu2.png",
+      "/images/menu/book14.jpg", //highball
+      "/images/menu/book15.jpg" //mojito      
+      ],
+    brunch: [
+      "/images/menu/book11.jpg", //souffles
+      "/images/menu/book12.jpg", //food1
+      "/images/menu/book13.jpg", //food2
+      "/images/pastas.jpg", //pastas
+    ],
     dessert: ["/images/menu/menu3.png"],
   };
 

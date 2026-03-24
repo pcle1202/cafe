@@ -1,5 +1,6 @@
 "use client";
 
+import { playfairDisplay } from "../fonts";
 import Reveal from "./animations/Reveal";
 
 export default function About() {
@@ -14,14 +15,27 @@ export default function About() {
           />
 
           <div className="space-y-5 text-center md:w-2/5 md:text-left">
-            <h2 className="text-3xl font-semibold sm:text-4xl">About Us</h2>
+            <h2
+              className={`${playfairDisplay.className} whitespace-nowrap text-2xl font-semibold leading-tight text-gray-800 sm:text-3xl`}
+            >
+              "Awaken Your Senses with Every Bite"
+            </h2>
 
-            <p className="text-base leading-8 text-gray-600 sm:text-lg">
-              Cafe 104 is a neighborhood cafe dedicated to bringing people
-              together over great coffee, fresh brunch, and homemade desserts.
-              We strive to create a welcoming space where friends, family, and
-              community can gather and enjoy simple, delicious food.
-            </p>
+            <div className="space-y-4 text-base leading-7 text-gray-600 sm:text-lg">
+              <p>
+                Our commitment to premium ingredients and traditional craftsmanship is at the
+                heart of everything we do. At CAFE 104, we bring you the perfect balance of
+                flavors from our cloud-like Souffle Pancakes to our satisfying Korean-fusion
+                sandwiches.
+              </p>
+
+              <p>
+                Enjoy a moment of relaxation with our refined desserts and seasonal specialty
+                beverages, all thoughtfully crafted to highlight rich, natural depths over
+                artificial sweetness. We strive to be a curated space that adds a touch of
+                brilliance to your everyday routine.
+              </p>
+            </div>
           </div>
         </div>
       </Reveal>

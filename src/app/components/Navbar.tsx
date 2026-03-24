@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { deliusSwashCaps } from "../fonts";
 
 const links = [
   { href: "/", label: "Home" },
@@ -23,7 +24,7 @@ export default function Navbar() {
           {/* Wordmark */}
           <Link
             href="/"
-            className="z-50 text-[1.7rem] font-black tracking-[0.02em] text-white [font-family:'Arial_Rounded_MT_Bold','Nunito','Trebuchet_MS','Verdana',sans-serif] md:absolute md:left-6 md:top-1/2 md:-translate-y-1/2 md:text-[2rem] md:text-[#7FA695]"
+            className={`${deliusSwashCaps.className} z-50 text-[1.7rem] font-black tracking-[0.02em] text-white [text-shadow:0_0_1px_currentColor,0_0_2px_currentColor] [-webkit-text-stroke:0.6px_currentColor] md:absolute md:left-6 md:top-1/2 md:-translate-y-1/2 md:text-[2rem] md:text-[#7FA695]`}
             onClick={() => setMenuOpen(false)}
           >
             Cafe104
