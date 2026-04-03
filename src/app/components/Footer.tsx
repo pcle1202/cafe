@@ -13,7 +13,7 @@ export default function Footer() {
             className="mb-4 w-32 opacity-90 sm:mb-6 sm:w-52 md:w-64"
           />
 
-          <p className="mb-2 text-lg font-semibold sm:text-xl">
+          <p className="mb-2 text-lg font-semibold md:hidden sm:text-xl">
             Follow us on:
           </p>
 
@@ -21,7 +21,7 @@ export default function Footer() {
             href="https://www.instagram.com/cafe104duluth/"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 transition hover:scale-105"
+            className="inline-flex items-center gap-2 transition hover:scale-105 md:hidden"
           >
             <img src="/images/instagram.jpg" alt="Instagram" className="w-5 sm:w-6" />
             <span className="text-lg sm:text-lg">@cafe104duluth</span>
@@ -66,6 +66,19 @@ export default function Footer() {
           <div className="space-y-1.5 sm:space-y-2">
             <p>Mon - Sun: 10 AM - 11 PM</p>
             <p>Kitchen: 10 AM - 10 PM</p>
+          </div>
+
+          <div className="mt-5 hidden md:block">
+            <p className="mb-2 text-lg font-semibold">Follow us on:</p>
+            <a
+              href="https://www.instagram.com/cafe104duluth/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 transition hover:scale-105"
+            >
+              <img src="/images/instagram.jpg" alt="Instagram" className="w-5 sm:w-6" />
+              <span className="text-lg sm:text-lg">@cafe104duluth</span>
+            </a>
           </div>
         </div>
       </div>
