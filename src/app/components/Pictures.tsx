@@ -1,7 +1,7 @@
 "use client";
 
 import Reveal from "./animations/Reveal";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const pictureImages = [
   "/images/gallery/mojitos.jpg",
@@ -28,7 +28,7 @@ const pictureImages = [
   "/images/gallery/seasonal5.jpg",
   "/images/gallery/signaturecoffee.jpg",
   "/images/gallery/ssam.jpg",
-  "/images/gallery/strawberry matcha.jpg",
+  "/images/gallery/strawberry-matcha.jpg",
   "/images/gallery/vinchaud.jpg",
   "/images/gallery/vinchaud2.jpg",
   "/images/gallery/burger.jpg",
@@ -36,14 +36,27 @@ const pictureImages = [
 
 export default function Gallery() {
   const sliderRef = useRef<HTMLDivElement>(null);
+  const mobileTrackRef = useRef<HTMLDivElement>(null);
 
   const isDown = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mobileIndex, setMobileIndex] = useState(0);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const syncViewport = () => setIsMobile(mediaQuery.matches);
+
+    syncViewport();
+    mediaQuery.addEventListener("change", syncViewport);
+
+    return () => mediaQuery.removeEventListener("change", syncViewport);
+  }, []);
 
   useEffect(() => {
     const slider = sliderRef.current;
-    if (!slider) return;
+    if (!slider || isMobile) return;
 
     let animationFrame: number;
 
@@ -60,7 +73,23 @@ export default function Gallery() {
     animationFrame = requestAnimationFrame(autoScroll);
 
     return () => cancelAnimationFrame(animationFrame);
-  }, []);
+  }, [isMobile]);
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const interval = window.setInterval(() => {
+      setMobileIndex((currentIndex) => (currentIndex + 1) % pictureImages.length);
+    }, 3200);
+
+    return () => window.clearInterval(interval);
+  }, [isMobile]);
+
+  useEffect(() => {
+    if (!isMobile || !mobileTrackRef.current) return;
+
+    mobileTrackRef.current.style.transform = `translateX(-${mobileIndex * 100}%)`;
+  }, [isMobile, mobileIndex]);
 
   const handlePointerDown = (e: React.PointerEvent) => {
     isDown.current = true;
@@ -85,24 +114,44 @@ export default function Gallery() {
   return (
     <section className="pb-16 pt-8 sm:pb-20 sm:pt-10">
       <Reveal>
-        <div
-          ref={sliderRef}
-          className="flex cursor-grab overflow-x-scroll select-none active:cursor-grabbing"
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          onPointerLeave={handlePointerUp}
-        >
-          {pictureImages.map((src) => (
-            <img
-              key={src}
-              src={src}
-              draggable="false"
-              className={imageClassName}
-              alt="Cafe 104 food and drinks"
-            />
-          ))}
-        </div>
+        <>
+          <div className="overflow-hidden bg-[#f7f3ee] md:hidden">
+            <div
+              ref={mobileTrackRef}
+              className="flex transition-transform duration-700 ease-out"
+            >
+              {pictureImages.map((src) => (
+                <div key={src} className="flex h-[360px] w-full flex-shrink-0 items-center justify-center">
+                  <img
+                    src={src}
+                    draggable="false"
+                    className="h-full w-full object-contain"
+                    alt="Cafe 104 food and drinks"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div
+            ref={sliderRef}
+            className="hidden cursor-grab overflow-x-scroll select-none active:cursor-grabbing md:flex"
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerLeave={handlePointerUp}
+          >
+            {pictureImages.map((src) => (
+              <img
+                key={src}
+                src={src}
+                draggable="false"
+                className={imageClassName}
+                alt="Cafe 104 food and drinks"
+              />
+            ))}
+          </div>
+        </>
       </Reveal>
     </section>
   );
