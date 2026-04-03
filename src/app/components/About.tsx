@@ -5,7 +5,7 @@ import Reveal from "./animations/Reveal";
 
 export default function About() {
   return (
-    <section className="px-6 pb-10 pt-14 sm:px-6 sm:pb-12 sm:pt-20">
+    <section className="px-7 pb-10 pt-14 sm:px-6 sm:pb-12 sm:pt-20">
       <Reveal>
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 sm:gap-10 md:flex-row md:gap-16">
           <img
@@ -16,7 +16,7 @@ export default function About() {
 
           <div className="max-w-[34rem] space-y-5 px-2 text-center md:w-2/5 md:max-w-none md:px-0 md:text-left">
             <h2
-              className={`${playfairDisplay.className} whitespace-nowrap text-2xl font-semibold italic leading-tight text-gray-800 sm:text-3xl`}
+              className={`${playfairDisplay.className} text-2xl font-semibold italic leading-tight text-gray-800 sm:text-3xl`}
             >
               &ldquo;Awaken Your Senses with Every Bite&rdquo;
             </h2>

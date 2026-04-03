@@ -63,7 +63,7 @@ export default function Footer() {
             HOURS:
           </h4>
 
-          <div className="space-y-1.5 whitespace-nowrap sm:space-y-2">
+          <div className="space-y-1.5 sm:space-y-2">
             <p>Mon - Sun: 10 AM - 11 PM</p>
             <p>Kitchen: 10 AM - 10 PM</p>
           </div>

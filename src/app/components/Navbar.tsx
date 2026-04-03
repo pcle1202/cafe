@@ -19,8 +19,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#7FA695]">
-        <div className="relative mx-auto flex h-18 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-16 md:justify-center">
+      <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#7FA695]">
+        <div className="relative mx-auto flex h-18 w-full max-w-6xl items-center justify-between px-4 sm:px-6 md:h-16 md:justify-center">
           {/* Wordmark */}
           <Link
             href="/"
