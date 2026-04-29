@@ -2,6 +2,7 @@ import './globals.css'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { poppins } from "./fonts";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: 'Cafe 104',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
