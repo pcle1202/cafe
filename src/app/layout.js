@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { poppins } from "./fonts";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: 'Cafe 104',
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
 
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
